@@ -1,0 +1,45 @@
+{
+  "name": "react-jrate",
+  "version": "0.1.0",
+  "description": "Generate SVG based Rating with various customized fancy features using ReactJS",
+  "main": "lib/react-jrate.js",
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.7.11",
+    "babel-loader": "^5.3.2",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "scripts": {
+  	"dev": "webpack-dev-server --progress --colors",
+    "demo": "webpack-dev-server",
+    "compile": "babel -d lib/ src/ ",
+    "prepublish": "npm run compile",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-component",
+    "jrate",
+    "rating",
+    "rate",
+    "react"
+  ],
+  "author": {
+    "name": "Senthil Porunan<senthilraja39@gmail.com>"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:senthilporunan/react-jrate.git"
+  },
+  "homepage": "https://github.com/senthilporunan/react-jrate",
+  "maintainers": [
+    {
+      "name": "Senthil Porunan",
+      "email": "senthilraja39@gmail.com"
+    }
+  ]
+}
