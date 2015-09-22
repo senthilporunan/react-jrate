@@ -5,11 +5,21 @@ import ReactRating from '../lib/react-jrate.js'
 var newSettings = {
 	count: 5,
 	shape: 'STAR',
-	rating: 3.5,
+	rating: 13.5,
 	width: '70',
 	height: '70',
-	backgroundColor: 'green',
-	strokeWidth: '5px'
+	backgroundColor: 'grey',
+	strokeWidth: '5px',
+	opacity: 1,
+	min: 10,
+    max: 15,
+    minSelected: 12,
+    onChange: function() {
+    	console.log("OnChange method called");
+    },
+    onSet: function() {
+    	console.log("OnSet method called");
+    }
 };
 var id = document.getElementById('jrate');
 setTimeout(function() {

@@ -6,13 +6,29 @@ export default class Shape extends React.Component {
 
 	constructor(props) {
 		super(props);
-		console.dir(this);
-		this.handlemousemove = this.handlemousemove.bind(this);
+		this.handleMouseMove = this.handleMouseMove.bind(this);
+		this.handleMouseClick = this.handleMouseClick.bind(this);
+		this.handleMouseLeave = this.handleMouseLeave.bind(this);
 	}
 
-	handlemousemove() {
-		console.log('handlemousemove');
-		RatingUtils.onEnterOrClickEvent(document, this.props.id, this.props.settings, this.props.idx);
+	handleMouseMove(event) {
+		RatingUtils.onEnterOrClickEvent(document, this.props.id, this.props.settings, this.props.idx, event);
+	}
+
+	handleMouseClick(event) {
+		RatingUtils.onEnterOrClickEvent(document, this.props.id, this.props.settings, this.props.idx, event, true);
+
+		if (this.props.settings.onSet && typeof this.props.settings.onSet === "function") {
+            this.props.settings.onSet.apply(this, [this.props.settings.rating]);
+        }
+	}
+
+	handleMouseLeave(event) {
+		RatingUtils.showRating(document, this.props.id, this.props.settings, this.props.settings.rating);
+		
+		if (this.props.settings.onChange && typeof this.props.settings.onChange === "function") {
+            this.props.settings.onChange.apply(this, [this.props.settings.rating]);
+       	}
 	}
 
 	render()  {
@@ -109,7 +125,10 @@ export default class Shape extends React.Component {
                     throw Error("No such shape as " + this.props.settings['shape']);
             }
 
-			return (<div onMouseMove={this.handlemousemove} style={{display:'inline-block'}}  
+			return (<div onMouseMove={this.handleMouseMove} 
+					onClick={this.handleMouseClick} 
+					onMouseLeave={this.handleMouseLeave}
+					style={this.props.settings.horizontal ? {display:'inline-block'} : {display:'block'}}  
 					dangerouslySetInnerHTML={{__html: shapeRate}}>		
 					</div>);
         }

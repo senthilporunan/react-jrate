@@ -23,14 +23,10 @@ export default class ReactRating extends React.Component {
 		for (let idx = 0; idx < this.settings.count; idx++) {
 			document.getElementById(this.props.id).replaceChild(
 				React.findDOMNode(document.getElementById(this.props.id + '_grad' + (idx))),
-				RatingUtils.showNormalRating(React.findDOMNode(document.getElementById(this.props.id + '_grad' + (idx))), settings));
+				RatingUtils.showNormalRating(React.findDOMNode(document.getElementById(this.props.id + '_grad' + idx)), settings));
 		}
 
 		RatingUtils.showRating(document, this.props.id, settings);
-	}
-
-	componentDidUpdate() {
-		console.log('Inside componentDidUpdate11');
 	}
 
 	drawShape() {
@@ -44,7 +40,6 @@ export default class ReactRating extends React.Component {
 	}
 
 	render() {
-		console.log('render()');
 		var styles = {
 			whiteSpace: 'nowrap',
 			cursor: 'pointer'
