@@ -7,7 +7,7 @@ let Utils = {
     },
 	extend: (defaultValues, optionValues) => {
 		for (let key in defaultValues) 
-			if (optionValues.hasOwnProperty(key)) 
+			if (optionValues !== undefined && optionValues.hasOwnProperty(key)) 
 				defaultValues[key] = optionValues[key];
 		return defaultValues;
 	},
