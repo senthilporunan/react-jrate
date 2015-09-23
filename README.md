@@ -121,7 +121,7 @@ var newSettings = {
 React.render(<ReactRating settings={newSettings} id="jrate"/>,document.getElementById('jrate'));
 ```
 
-####Minimum and Maximum Value
+#### Minimum and Maximum Value
 Set a desired minimum and maximum value.
 ```js
 var newSettings = {
@@ -130,7 +130,7 @@ var newSettings = {
 };
 React.render(<ReactRating settings={newSettings} id="jrate"/>,document.getElementById('jrate'));
 ```
-####Precision
+#### Precision
 Set the precision value.
 ```js
 var newSettings = {
@@ -138,7 +138,7 @@ var newSettings = {
 };
 React.render(<ReactRating settings={newSettings} id="jrate"/>,document.getElementById('jrate'));
 ```
-####Stroke Width
+#### Stroke Width
 Set the stroke width for STAR, CIRCLE, RECTANGLE, RHOMBUS, TRIANGLE only.
 ```js
 var newSettings = {
@@ -146,7 +146,7 @@ var newSettings = {
 };
 React.render(<ReactRating settings={newSettings} id="jrate"/>,document.getElementById('jrate'));
 ```
-####Horizontal
+#### Horizontal
 We can set a boolean variable to make horizontal or vertical. And, set a boolean value for reverse.
 ```js
 var newSettings = {
@@ -154,7 +154,7 @@ var newSettings = {
 };
 React.render(<ReactRating settings={newSettings} id="jrate"/>,document.getElementById('jrate'));
 ```
-####Reverse
+#### Reverse
 We can set a boolean variable to make reverse or not.
 ```js
 var newSettings = {
@@ -162,7 +162,7 @@ var newSettings = {
 };
 React.render(<ReactRating settings={newSettings} id="jrate"/>,document.getElementById('jrate'));
 ```
-####ReadOnly
+#### ReadOnly
 Set the readonly value.
 ```js
 var newSettings = {
@@ -170,7 +170,7 @@ var newSettings = {
 };
 React.render(<ReactRating settings={newSettings} id="jrate"/>,document.getElementById('jrate'));
 ```
-####onChange
+#### onChange
 Write your own methods to do own action when the rating value change action occurs.
 ```js
 var newSettings = {
@@ -180,7 +180,7 @@ var newSettings = {
 });
 React.render(<ReactRating settings={newSettings} id="jrate"/>,document.getElementById('jrate'));
 ```
-####onSet
+#### onSet
 Write your own methods to do own action when the rating value click or set action occurs.
 ```js
 var newSettings = {
@@ -190,7 +190,7 @@ var newSettings = {
 };
 React.render(<ReactRating settings={newSettings} id="jrate"/>,document.getElementById('jrate'));
 ```
-####License
+#### License
 This plugin is licensed under the [MIT license](https://github.com/senthilporunan/jRate/blob/master/LICENSE).
 
 Copyright (c) 2015 [Senthil Porunan](http://www.toolitup.com/)
