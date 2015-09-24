@@ -1,4 +1,4 @@
-# react-jrate - SVG based Rating plugin
+# react-jrate - React based Rating Component
 =======================================
 
 This react component helps to generate SVG based RATING with various fancy features. Download and include this component in your html file.
