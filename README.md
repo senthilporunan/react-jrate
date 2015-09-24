@@ -16,6 +16,7 @@ You can install using npm package manager.
 ```js
 npm install react-jrate --save
 ```
+#### [JSFiddle Working Example](http://jsfiddle.net/Senthilraja2020/13k2wdgn/2/)
 
 ### Including it on your page
 
