@@ -1,6 +1,6 @@
 {
   "name": "react-jrate",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Generate SVG based Rating with various customized fancy features using ReactJS",
   "main": "lib/react-jrate.js",
   "dependencies": {
